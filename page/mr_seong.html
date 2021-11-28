@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//hover 이벤트
+		$(".menuA").hover(function() {
+			// 마우스가 올라왔을때
+			$(this).css('color', 'black');
+		}, function() {
+			$(this).css('color', 'white');
+		});
+	});
+	
+	$(document).on("click", "#phone", function(){
+		alert("전화번호는 010-9644-3979 입니다");
+	});
+	
+</script>
+
+
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%
+}
+
+.wrap {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	clear: both;
+}
+
+.img_wrap {
+	display: block;
+	float: left;
+	width: 55%;
+	height: 100%;
+}
+
+.text_wrap {
+	display: block;
+	float: left;
+	width: 45%;
+	height: 100%;
+}
+
+#header {
+	height: 75px;
+	padding: 1px;
+	color: white;
+	background: teal;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+#header a {
+	text-decoration: none;
+	color: white;
+}
+
+.logo {
+	margin-left: 30px;
+}
+
+.menu {
+	margin: 30px;
+	list-style: none;
+}
+
+.nav_ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.box {
+	width: 450px;
+	height: 450px;
+	border-radius: 70%;
+	overflow: hidden;
+	margin: auto;
+	margin-top: 100px;
+	display: block;
+}
+
+.text {
+	margin-top: 100px;
+}
+
+.profile {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#container {
+	background: lightgray;
+	min-height: 900px;
+}
+
+#text {
+	display: block;
+	float: right;
+}
+
+.hobby {
+	display: flex;
+	justify-content: space-evenly; align-items : center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.hobby_pic {
+	width: 350px;
+	height: 350px;
+	border-radius: 25%;
+}
+
+figcaption {
+	text-align: center;
+}
+
+.empty {
+	min-height: 300px;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: aliceblue;
+}
+
+.tag_pic {
+	width: 50px;
+	height: 50px;
+	border-radius: 75%;
+	overflow: hidden;
+}
+
+#footer {
+	height: 10%;
+	width: 100%;
+	background: lightgray;
+}
+</style>
+
+</head>
+<body>
+	<div id="header">
+		<div class="logo">
+			<a href="#" class="menuA">메인</a>
+		</div>
+		<div class="nav_list">
+			<ul class="nav_ul">
+				<li class="menu"><a href="#" class="menuA">ABOUT</a></li>
+				<li class="menu"><a href="#hobby" class="menuA">HOBBY</a></li>
+				<li class="menu"><a href="#contact" class="menuA">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="container">
+		<div>
+			<br> <br> <br> <br> <br> <br>
+		</div>
+		<div class="wrap" id="about">
+			<div class="img_wrap">
+				<div class="box">
+					<img src="../img/pic4.jpg" class="profile">
+				</div>
+			</div>
+			<div class="text_wrap">
+				<div class="text">
+					<h1>영업자였던 내가 개발자?</h1>
+					<h2>안녕하세요. 신예 성상은입니다.</h2>
+					<br>
+					<h3>
+						영업자로 3년반 동안 활동하면서 월간 반복업무를 효율적으로 개선해보자 하며<br> 엑셀 매크로 프로그램을
+						만들었었습니다.<br> <br> 그 경험을 바탕으로 프로그램을 개발하는것에 <strong>호기심</strong>을,
+						배우면서 <strong>매력</strong>을 느꼈습니다.<br> 그로 프로그래밍 개발자의 길을
+						걷게되었습니다.<br> <br> 웹 개발 및 빅데이터 과정을 수료하며 JAVA/Spring 기반으로
+						한 다양한 <br> 웹 개발 소스 및 파이썬을 이용한 빅데이터 크롤링 기술들을 배웠습니다.<br> <br>
+						초심인 사람들에게 편리한 서비스를 제공하기 위해<br>끊임없이 성장하는 개발자가 되겠습니다. <br>
+
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="empty" id="hobby"></div>
+		<div class="hobby">
+			<div class="hobby1">
+				<figure>
+					<span> <img src="../img/camping.jpg" class="hobby_pic">
+					</span>
+					<figcaption>
+						<h3>캠핑</h3>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="hobby1">
+				<figure>
+					<span> <img src="../img/travel.jpg" class="hobby_pic">
+					</span>
+					<figcaption>
+						<h3>여행</h3>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="hobby1">
+				<figure>
+					<span> <img src="../img/foodie.jpg" class="hobby_pic">
+					</span>
+					<figcaption>
+						<h3>먹방</h3>
+					</figcaption>
+				</figure>
+			</div>
+
+		</div>
+		<div class="empty"></div>
+
+		<div class="contact" id="contact">
+			<h2>Contact</h2>
+			<h3>언제든지 환영입니다!</h3>
+			<h3>전화번호 / 수행프로젝트 / 인스타그램은 아래 버튼을 클릭하세요</h3>
+			<div class="tag">
+				<img alt="phone" src="../img/phone.PNG" class="tag_pic" id="phone">
+				<a	href="https://wave-cosmonaut-3f8.notion.site/Project-Doosot-34599945f2524ba284d8d297bd3cf8c7"
+					target="_blank">
+					<img alt="project" src="../img/project.PNG" class="tag_pic">	
+				</a>
+				<a	href="https://www.instagram.com/sangeun__hh/"
+					target="_blank">
+					<img alt="project" src="../img/insta.PNG" class="tag_pic">	
+				</a>
+			</div>
+			<br><br><br>
+		</div>
+	</div>
+
+
+</body>
+</html>
