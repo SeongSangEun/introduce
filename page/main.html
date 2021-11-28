@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		//hover 이벤트
+		$(".menuA").hover(function() {
+			// 마우스가 올라왔을때
+			$(this).css('color','black');
+		}, function() {
+			$(this).css('color','white');	
+		});		
+	});
+	
+</script>
+
+
+<style type="text/css">
+body {
+	margin:0;
+	padding : 0;
+	height: 100%
+}
+
+#main {
+	height: 90%;
+	width: 100%;
+}
+
+#header {
+	height: 75px;
+	padding : 1px;
+	color : white;
+	background : teal;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left:0;
+	right: 0;
+}
+
+#header a{
+	text-decoration: none;
+	color:white;
+}
+
+.logo {
+	margin-left: 30px;
+}
+
+.menu {
+	margin: 30px;
+	list-style: none;
+}
+
+.nav_ul {
+	display : flex;
+	justify-content: space-between;
+}
+
+.box {
+	width: 450px;
+	height: 450px;
+	border-radius: 70%;
+	overflow: hidden;
+	margin: auto;
+    margin-top: 75px;
+    display: block;
+    float: left;
+}
+
+.profile {
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+}
+
+#container{
+	background: lightgray;
+	min-height: 900px;
+}
+
+#text {
+	display : block;
+	float: right;
+}
+
+#footer {
+	height: 10%;
+	width: 100%;
+	background: lightgray;
+	
+}
+
+</style>
+
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div class="logo">
+				<a href="#" class="menuA">메인</a>
+			</div>
+			<div class="nav_list">
+				<ul class="nav_ul">
+					<li class="menu"><a href="#" class="menuA">ABOUT</a></li>
+					<li class="menu"><a href="#" class="menuA">SKILLS</a></li>
+					<li class="menu"><a href="#" class="menuA">PROJECT</a></li>
+					<li class="menu"><a href="#" class="menuA">CONTACT</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="container">
+			<div>
+				<br><br><br><br><br><br>
+			</div>
+			<div class="wrap">
+				<div class="img_wrap">
+					<div class="box">
+						<img src="../img/pic4.jpg" class="profile">
+					</div>				
+				</div>
+				<div class="text">
+					<h1>안녕하세요.</h1>
+				</div>			
+			</div>
+		</div>
+
+	</div>
+	<div id="footer">
+		<p>푸터입니다.</p>
+	</div>
+	
+	
+</body>
+</html>
